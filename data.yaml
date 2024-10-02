@@ -5,6 +5,12 @@ female_vocal:
   - "Yumi Arai - Hikouki Gumo"
   - "succducc - me & u"
   - "Silent Siren - Routine"
+  - "Gloria Gaynor - Can't take my eyes off you"
+  - "Nanaki - Mousou Kajitsu"
+  - "BABYMETAL - Gimme chocolate!!"
+  - "Hatsune Miku - Mythologia's End"
+  - "YUC'e - Future Candy"
+  - "Reol - Asymmetry"
 
 male_vocal:
   - "The Killers - Mr. Brightside"
@@ -32,6 +38,9 @@ male_vocal:
   - "Noma - Brain Power"
   - "MAN WITH A MISSION - Raise your flag"
   - "Bill Withers - Just The Two Of Us"
+  - "Muse - Supermassive Black Hole"
+  - "Initial D - Deja Vu"
+  - "Cartoon - Whatever I Do"
 
 fast_paced:
   - "The Killers - Mr. Brightside"
@@ -51,6 +60,16 @@ fast_paced:
   - "Noma - Brain Power"
   - "MAN WITH A MISSION - Raise your flag"
   - "Silent Siren - Routine"
+  - "Pokémon - Champion Cynthia Battle Music"
+  - "Camellia - Exit this Earth's Atomosphere"
+  - "Nanaki - Mousou Kajitsu"
+  - "BABYMETAL - Gimme chocolate!!"
+  - "Hatsune Miku - Mythologia's End"
+  - "Ludwig Göransson - Can You Hear The Music"
+  - "Initial D - Deja Vu"
+  - "YUC'e - Future Candy"
+  - "Reol - Asymmetry"
+  - "VINXIS - Sidetracked Day"
 
 medium_slow:
   - "Sum 41 - In Too Deep"
@@ -76,6 +95,9 @@ medium_slow:
   - "Crystal Dolphin - Engelwood"
   - "Imagine Dragons - Warriors"
   - "Bill Withers - Just The Two Of Us"
+  - "Gloria Gaynor - Can't take my eyes off you"
+  - "Muse - Supermassive Black Hole"
+  - "Cartoon - Whatever I Do"
 
 strongly_emotive:
   - "Porter Robinson - Goodbye To A World"
@@ -92,6 +114,9 @@ strongly_emotive:
   - "Elton John - Rocket Man"
   - "The Wonder Years - Cardinals"
   - "Bill Withers - Just The Two Of Us"
+  - "Gloria Gaynor - Can't take my eyes off you"
+  - "Ludwig Göransson - Can You Hear The Music"
+  - "Cartoon - Whatever I Do"
 
 english:
   - "The Killers - Mr. Brightside"
@@ -117,3 +142,6 @@ english:
   - "Pierce The Veil - King for a Day"
   - "Noma - Brain Power"
   - "Bill Withers - Just The Two Of Us"
+  - "Gloria Gaynor - Can't take my eyes off you"
+  - "Muse - Supermassive Black Hole"
+  - "Cartoon - Whatever I Do"

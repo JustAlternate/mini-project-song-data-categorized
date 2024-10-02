@@ -4,12 +4,12 @@
 
 Les Catégories ont étaient trouvée avant d'avoir trouvé les morceaux :
 
-1. Female vocal     (Au moins une voix feminine)
-2. Male vocal       (Au moins une voix masculine)
+1. Female vocal     (voix feminine majoritaire)
+2. Male vocal       (voix masculine majoritaire)
 3. Fast paced       (Rythme rapide ou très rapide)
 4. Medium Slow      (Rythme lent ou moyen)
 5. Strongly Emotive (Qui suscite fortement l'émotion)
-6. English          (Au moins une paroles en Anglais)
+6. English          (Majorité de paroles en Anglais)
 
 Toutes les catégories seront assignées aux morceaux choisis sur la base du "feeling"
 Ce qui signifie que si un morceau me semble "Emotif" alors, je le classerai dans la catégorie "Strongly Emotive".
@@ -21,7 +21,7 @@ Ainsi, les catégories 3,4 et 5 sont très biaisées par ma propre interprétati
 Une règle d'assignation binaire est une règle qui permet de répondre par oui ou non à la question "Est-ce que ce morceau appartient à cette catégorie ?"
 
 Exemple :
-On pourrait imaginer que la catégorie "Fast paced" soit assignée suivant la règle d'assignation binaire : "Si le morceau a un BPM supérieur à 150, alors il est Fast Paced"
+On aurait pu imaginer que la catégorie "Fast paced" soit assignée suivant la règle d'assignation binaire : "Si le morceau a un BPM supérieur à 150, alors il est Fast Paced"
 
 Grâce à cette règle, on peut savoir pour n'importe quel morceau de musique existant s'il appartient ou non à la catégorie "Fast Paced"
 
@@ -90,3 +90,16 @@ Musiques retenus :
 35. MAN WITH A MISSION - Raise your flag
 36. Silent Siren - Routine
 37. Bill Withers - Just The Two Of Us
+38. VINXIS - Sidetracked Day
+39. Reol - Asymmetry
+40. Cartoon - Whatever I Do
+41. YUC'e - Future Candy
+42. Initial D - Deja Vu
+43. Muse - Supermassive Black Hole
+44. Ludwig Göransson - Can You Hear The Music
+45. Hatsune Miku - Mythologia's End
+46. BABYMETAL - Gimme chocolate!!
+47. Nanaki - Mousou Kajitsu
+48. Camellia - Exit this Earth's Atomosphere
+49. Gloria Gaynor - Can't take my eyes off you
+50. Pokémon - Champion Cynthia Battle Music

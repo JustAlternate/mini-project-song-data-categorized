@@ -71,9 +71,9 @@
 Toutes les catégories seront assignées aux morceaux choisis sur la base du "feeling"
 Ce qui signifie que si un morceau me semble "Emotif" alors, je le classerai dans la catégorie "Strongly Emotive".
 
-Ainsi, les catégories 3,4 et 5 sont très biaisées par ma propre interprétation, car il n'existe pas de ce que j'appelle "*règle d'assignation binaire évidente*" pour ces catégories.
+Ainsi, les catégories 3,4 et 5 sont très biaisées par ma propre interprétation, car il n'existe pas de ce que j'appelle "*des règles d'assignation binaire évidente*" pour ces catégories.
 
-Le classement des morceau se trouve dans le fichier [data.yaml](./data.yaml)
+Le classement des morceaux se trouve dans le fichier [data.yaml](./data.yaml)
 
 ### C'est quoi une "règle d'assignation binaire" ?
 
@@ -125,12 +125,49 @@ Et une liste de règle :
 8. "Has a fast tempo"
 9. "Has sense a of Authenticity"
 
-
 Une attribution correct pourrait être :
 
-Rock : {1,2,3}
-Heavy Metal : {1,2,3,5,6,7}
-Punk Rock : {1,2,3,8,9}
-Power Metal: {1,2,3,4,5,6,8}
+| Règle                           | Rock | Heavy Metal | Punk Rock | Power Metal |
+|:-------------------------------:|:----:|:-----------:|:---------:|:-----------:|
+| Has an electrical guitar        | 1    | 1           | 1         | 1           |
+| Has a drum                      | 1    | 1           | 1         | 1           |
+| Has a bass                      | 1    | 1           | 1         | 1           |
+| Has fantasy based lyrics        | 0    | 0           | 0         | 1           |
+| Has heavy bass                  | 0    | 1           | 0         | 1           |
+| Has heavy drums                 | 0    | 1           | 0         | 1           |
+| Has loud and distorted guitars  | 0    | 1           | 0         | 1           |
+| Has a fast tempo                | 0    | 0           | 1         | 1           |
+| Has sense of Authenticity       | 0    | 0           | 1         | 0           |
+
+Mais comment faire pour trouver une stratégie d'attribution automatique ?
+
+### Idée 1 clustering de catégories
+
+Imaginons 5 catégoies : 
+
+1. Rock
+2. Heavy Metal
+3. Power Metal
+4. Electronic Dance Music (EDM)
+5. Techno
+
+Pour chacune des catégories on introduit nous même au moins 2-3 règles prédefinis
+
+| Règle                            | Rock | Heavy Metal | Power Metal | EDM | Techno |
+|----------------------------------|------|-------------|-------------|-----|--------|
+| Has an electrical guitar         | 1    | 1           | 1           | 0   | 0      |
+| Has a drum                       | 1    | 1           | 1           | 0   | 0      |
+| Has a bass                       | 1    | 1           | 1           | 0   | 0      |
+| Has loud and distorted guitars   | 0    | 1           | 1           | 0   | 0      |
+| Has heavy drums                  | 0    | 1           | 1           | 0   | 0      |
+| Has heavy bass                   | 0    | 1           | 1           | 0   | 0      |
+| Has fantasy based lyrics         | 0    | 0           | 1           | 0   | 0      |
+| Has a fast tempo                 | 0    | 0           | 1           | 1   | 1      |
+| Has synthesizers                 | 0    | 0           | 0           | 1   | 0      |
+| Has electronic beats             | 0    | 0           | 0           | 1   | 1      |
+| Has repetitive beats             | 0    | 0           | 0           | 1   | 1      |
+| Has a bass-heavy kick            | 0    | 0           | 0           | 0   | 1      |
+| Has electronic instruments       | 0    | 0           | 0           | 0   | 1      |
+
 
 

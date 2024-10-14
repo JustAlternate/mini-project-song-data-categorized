@@ -1,8 +1,8 @@
-# Etape 1
+# Mini projet modélisation
 
 ## Morceaux
 
-(Règle imposée a moi même : Pas de répétition d'artiste)
+(Règle imposée à moi-même : Pas de répétition d'artiste)
 
 1. The Killers - Mr. Brightside
 2. Sum 41 - In Too Deep
@@ -13,49 +13,47 @@
 7. Green Day - Boulevard Of Broken Dreams
 8. Marillion - Kayleigh
 9. S3RL - Techno Kitty
-8. John Williams - Imperial March
-9. Hans Zimmer - Cornfield Chase
-10. blink-182 - I Miss You
-11. Queen – Bohemian Rhapsody
-12. C418 - Sweden
-13. Coldplay - Viva La Vida
-14. Lena Raine - otherside
-15. The OneUps - Kirby's Dream Land - Green Greens
-16. Tomohito Nishiura - Professor Layton's Theme
-17. Miki Matsubara - Stay With Me
-18. Mariya Takeuchi - Plastic Love
-19. Yumi Arai - Hikouki Gumo
-20. Dragon Force - Through The Fire And Flames
-21. succducc - me & u
-22. Kuba Oms - My Love
-23. Mrs. GREEN APPLE - インフェルノ(Inferno)
-24. Xi - Freedom Dive
-25. KANA-BOON - Silhouette
-26. Neck Deep - December
-27. Mayday Parade - Black Cat
-28. Elton John - Rocket Man
-29. The Wonder Years - Cardinals
-30. Crystal Dolphin - Engelwood
-31. Imagine Dragons - Warriors
-32. Sleeping With Sirens - If You Can't Hang
-33. Pierce The Veil - King for a Day
-34. Noma - Brain Power
-35. MAN WITH A MISSION - Raise your flag
-36. Silent Siren - Routine
-37. Bill Withers - Just The Two Of Us
-38. VINXIS - Sidetracked Day
-39. Reol - Asymmetry
-40. Cartoon - Whatever I Do
-41. YUC'e - Future Candy
-42. Initial D - Deja Vu
-43. Muse - Supermassive Black Hole
-44. Ludwig Göransson - Can You Hear The Music
-45. Hatsune Miku - Mythologia's End
-46. BABYMETAL - Gimme chocolate!!
-47. Nanaki - Mousou Kajitsu
-48. Camellia - Exit this Earth's Atomosphere
-49. Gloria Gaynor - Can't take my eyes off you
-50. Pokémon - Champion Cynthia Battle Music
+10. John Williams - Imperial March
+11. Hans Zimmer - Cornfield Chase
+12. blink-182 - I Miss You
+13. Queen – Bohemian Rhapsody
+14. C418 - Sweden
+15. Coldplay - Viva La Vida
+16. Lena Raine - otherside
+17. The OneUps - Kirby's Dream Land - Green Greens
+18. Tomohito Nishiura - Professor Layton's Theme
+19. Miki Matsubara - Stay With Me
+20. Mariya Takeuchi - Plastic Love
+21. Yumi Arai - Hikouki Gumo
+22. Dragon Force - Through The Fire And Flames
+23. succducc - me & u
+24. Kuba Oms - My Love
+25. Mrs. GREEN APPLE - インフェルノ(Inferno)
+26. Xi - Freedom Dive
+27. KANA-BOON - Silhouette
+28. Neck Deep - December
+29. Mayday Parade - Black Cat
+30. Elton John - Rocket Man
+31. The Wonder Years - Cardinals
+32. Crystal Dolphin - Engelwood
+33. Imagine Dragons - Warriors
+34. Sleeping With Sirens - If You Can't Hang
+35. Pierce The Veil - King for a Day
+36. Noma - Brain Power
+37. MAN WITH A MISSION - Raise your flag
+38. Silent Siren - Routine
+39. Bill Withers - Just The Two Of Us
+40. VINXIS - Sidetracked Day
+41. Reol - Asymmetry
+42. Cartoon - Whatever I Do
+43. YUC'e - Future Candy
+44. Initial D - Deja Vu
+45. Muse - Supermassive Black Hole
+46. Ludwig Göransson - Can You Hear The Music
+47. Hatsune Miku - Mythologia's End
+48. BABYMETAL - Gimme chocolate!!
+49. Nanaki - Mousou Kajitsu
+50. Camellia - Exit this Earth's Atomosphere
 
 ## Catégories
 
@@ -82,7 +80,7 @@ J'appelle une règle d'assignation binaire, une règle qui permet de répondre p
 Exemple :
 On aurait pu imaginer que la catégorie "Fast paced" soit assignée suivant la règle d'assignation binaire : "Si le morceau a un BPM supérieur à 150, alors il est Fast Paced"
 
-Grâce à cette règle, on peut savoir pour n'importe quel morceau de musique existant s'il appartient ou non à la catégorie "Fast Paced"
+Grâce à cette règle, on peut savoir pour n'importe quel morceau de musique existant s'il appartient ou non à notre interprétation de la catégorie "Fast Paced"
 
 Par contre, on remarquera qu'il n'est pas toujours aussi facile de trouver une règle d'assignation binaire qui soit juste :
 
@@ -96,15 +94,15 @@ Mais alors:
 - Quid de ce qu'est le "vocabulaire proche de l'émotion"
 - ...
 
-On pourra aussi constater que certaines catégories semblent dans certains cas avoir une règle d'assignation binaire *evidente* (plus simple a trouver):
+On pourra aussi constater que certaines catégories semblent dans certains cas avoir une règle d'assignation binaire *évidente* (plus simple à trouver):
 
 Par exemple :
 
 Pour la catégorie English: "Si un morceau a une majorité de paroles dans la langue Anglaise, alors il est English."
 
-Pour ma conception de la catégorie English, cette règle semble parfaite, donc c'est pour moi *règle d'assignation binaire évidente*.
+Pour ma conception de la catégorie English, cette règle parait parfaite, donc c'est pour moi une *règle d'assignation binaire évidente*.
 
-La question est donc la suivante : "Comment associer le plus justement possible des règles d'assignation a des catégories ?"
+La question est donc la suivante : "Comment associer le plus justement possible des règles d'assignation à des catégories ?"
 
 Imaginons une liste de catégories :
 
@@ -123,11 +121,11 @@ Et une liste de règle :
 6. "Has heavy drums"
 7. "Has loud and distorded guitars"
 8. "Has a fast tempo"
-9. "Has sense a of Authenticity"
+9. "Has a sense of Authenticity"
 
-Une attribution correct pourrait être :
+Une attribution correcte pourrait être :
 
-| Règle                           | Rock | Heavy Metal | Punk Rock | Power Metal |
+| Rules                           | Rock | Heavy Metal | Punk Rock | Power Metal |
 |:-------------------------------:|:----:|:-----------:|:---------:|:-----------:|
 | Has an electrical guitar        | 1    | 1           | 1         | 1           |
 | Has a drum                      | 1    | 1           | 1         | 1           |
@@ -137,11 +135,11 @@ Une attribution correct pourrait être :
 | Has heavy drums                 | 0    | 1           | 0         | 1           |
 | Has loud and distorted guitars  | 0    | 1           | 0         | 1           |
 | Has a fast tempo                | 0    | 0           | 1         | 1           |
-| Has sense of Authenticity       | 0    | 0           | 1         | 0           |
+| Has a sense of Authenticity     | 0    | 0           | 1         | 0           |
 
 Mais comment faire pour trouver une stratégie d'attribution automatique ?
 
-### Idée 1 clustering de catégories
+### Idée naïve: clustering de catégories
 
 Imaginons 5 catégoies : 
 
@@ -151,9 +149,9 @@ Imaginons 5 catégoies :
 4. Electronic Dance Music (EDM)
 5. Techno
 
-Pour chacune des catégories on introduit nous même au moins 2-3 règles prédefinis
+Pour chacune des catégories, on introduit nous-même au moins 2-3 règles prédéfinis
 
-| Règle                            | Rock | Heavy Metal | Power Metal | EDM | Techno |
+| Rules                            | Rock | Heavy Metal | Power Metal | EDM | Techno |
 |----------------------------------|------|-------------|-------------|-----|--------|
 | Has an electrical guitar         | 1    | 1           | 1           | 0   | 0      |
 | Has a drum                       | 1    | 1           | 1           | 0   | 0      |
@@ -169,5 +167,13 @@ Pour chacune des catégories on introduit nous même au moins 2-3 règles préde
 | Has a bass-heavy kick            | 0    | 0           | 0           | 0   | 1      |
 | Has electronic instruments       | 0    | 0           | 0           | 0   | 1      |
 
+Moi, quand je vois une matrice comme celle-là, je pense tout de suite à l'analyse en composante principale :D
 
+Après une simple implémentation de la PCA (avec un peu d'aide de ollama starcoder2), on peut créer le graph suivant :
+
+![./assets/cluster.png](./assets/cluster.png)
+
+Et en effet, on remarque bien deux clusters se préciser.
+
+On pourra alors ajouter des catégories et inférer avec plus ou moins de risque d'autres règles d'assignation sur la base de nos clusters.
 

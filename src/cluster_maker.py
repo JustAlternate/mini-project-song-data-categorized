@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 categories = ['Rock', 'Heavy Metal', 'Power Metal', 'EDM', 'Techno']
 
+# Our matrix categories-rules
 M = np.array([
     [1, 1, 1, 0, 0],
     [1, 1, 1, 0, 0],
@@ -25,7 +26,7 @@ Mt = M.T
 cov_matrix = np.cov(Mt, rowvar=False)
 
 # --------------------
-# THIS CODE IS THANKS TO GPT :
+# THIS PAR OF THE CODE IS THANKS TO STARCODER2 :
 eigen_values, eigen_vectors = np.linalg.eigh(cov_matrix)
 sorted_index = np.argsort(eigen_values)[::-1]
 sorted_eigenvalue = eigen_values[sorted_index]

@@ -1,5 +1,7 @@
 # Mini projet modélisation
 
+Repositorie : https://github.com/JustAlternate/mini-project-song-data-categorized
+
 ## Morceaux
 
 (Règle imposée à moi-même : Pas de répétition d'artiste)
@@ -71,7 +73,7 @@ Ce qui signifie que si un morceau me semble "Emotif" alors, je le classerai dans
 
 Ainsi, les catégories 3,4 et 5 sont très biaisées par ma propre interprétation, car il n'existe pas de ce que j'appelle "*des règles d'assignation binaire évidente*" pour ces catégories.
 
-Le classement des morceaux se trouve dans le fichier [data.yaml](./data.yaml)
+Le classement des morceaux se trouve dans le fichier [data.yaml](./data.yaml) (où à la fin de ce compte rendu)
 
 ### C'est quoi une "règle d'assignation binaire" ?
 
@@ -102,7 +104,10 @@ Pour la catégorie English: "Si un morceau a une majorité de paroles dans la la
 
 Pour ma conception de la catégorie English, cette règle parait parfaite, donc c'est pour moi une *règle d'assignation binaire évidente*.
 
-La question est donc la suivante : "Comment associer le plus justement possible des règles d'assignation à des catégories ?"
+Ainsi on peut définir une musique par l'ensemble de ces règles d'assignation :
+Par exemple : "The Killers - Mr. Brightside" = {Male vocal, Fast Paced, English}
+
+Mais apres avoir défini une musique par ces règles d'assignations, comment l'associer à une catégorie ?
 
 Imaginons une liste de catégories :
 
@@ -175,5 +180,149 @@ Après une simple implémentation de la PCA (avec un peu d'aide de ollama starco
 
 Et en effet, on remarque bien deux clusters se préciser.
 
-On pourra alors ajouter des catégories et inférer avec plus ou moins de risque d'autres règles d'assignation sur la base de nos clusters.
+On pourra alors ajouter des musiques et inférer avec plus ou moins de risque d'autres règles d'assignation sur la base de nos clusters afin de se rapprocher d'une catégorie.
 
+```yaml
+female_vocal:
+  - "S3RL - Techno Kitty"
+  - "Miki Matsubara - Stay With Me"
+  - "Mariya Takeuchi - Plastic Love"
+  - "Yumi Arai - Hikouki Gumo"
+  - "succducc - me & u"
+  - "Silent Siren - Routine"
+  - "Nanaki - Mousou Kajitsu"
+  - "BABYMETAL - Gimme chocolate!!"
+  - "Hatsune Miku - Mythologia's End"
+  - "YUC'e - Future Candy"
+  - "Reol - Asymmetry"
+
+male_vocal:
+  - "The Killers - Mr. Brightside"
+  - "Sum 41 - In Too Deep"
+  - "Ultra Vomit - ÉVIER METAL"
+  - "My Chemical Romance - Welcome To The Black Parade"
+  - "Smash Mouth - All Star"
+  - "Green Day - Boulevard Of Broken Dreams"
+  - "Marillion - Kayleigh"
+  - "blink-182 - I Miss You"
+  - "Queen – Bohemian Rhapsody"
+  - "Coldplay - Viva La Vida"
+  - "Dragon Force - Through The Fire And Flames"
+  - "Kuba Oms - My Love"
+  - "Mrs. GREEN APPLE - インフェルノ(Inferno)"
+  - "KANA-BOON - Silhouette"
+  - "Neck Deep - December"
+  - "Mayday Parade - Black Cat"
+  - "Elton John - Rocket Man"
+  - "The Wonder Years - Cardinals"
+  - "Crystal Dolphin - Engelwood"
+  - "Imagine Dragons - Warriors"
+  - "Sleeping With Sirens - If You Can't Hang"
+  - "Pierce The Veil - King for a Day"
+  - "Noma - Brain Power"
+  - "MAN WITH A MISSION - Raise your flag"
+  - "Bill Withers - Just The Two Of Us"
+  - "Muse - Supermassive Black Hole"
+  - "Initial D - Deja Vu"
+  - "Cartoon - Whatever I Do"
+
+fast_paced:
+  - "The Killers - Mr. Brightside"
+  - "Ultra Vomit - ÉVIER METAL"
+  - "My Chemical Romance - Welcome To The Black Parade"
+  - "S3RL - Techno Kitty"
+  - "Queen – Bohemian Rhapsody"
+  - "Dragon Force - Through The Fire And Flames"
+  - "succducc - me & u"
+  - "Mrs. GREEN APPLE - インフェルノ(Inferno)"
+  - "Xi - Freedom Dive"
+  - "KANA-BOON - Silhouette"
+  - "Mayday Parade - Black Cat"
+  - "The Wonder Years - Cardinals"
+  - "Sleeping With Sirens - If You Can't Hang"
+  - "Pierce The Veil - King for a Day"
+  - "Noma - Brain Power"
+  - "MAN WITH A MISSION - Raise your flag"
+  - "Silent Siren - Routine"
+  - "Camellia - Exit this Earth's Atomosphere"
+  - "Nanaki - Mousou Kajitsu"
+  - "BABYMETAL - Gimme chocolate!!"
+  - "Hatsune Miku - Mythologia's End"
+  - "Ludwig Göransson - Can You Hear The Music"
+  - "Initial D - Deja Vu"
+  - "YUC'e - Future Candy"
+  - "Reol - Asymmetry"
+  - "VINXIS - Sidetracked Day"
+
+medium_slow:
+  - "Sum 41 - In Too Deep"
+  - "Porter Robinson - Goodbye To A World"
+  - "Smash Mouth - All Star"
+  - "Green Day - Boulevard Of Broken Dreams"
+  - "Marillion - Kayleigh"
+  - "John Williams - Imperial March"
+  - "Hans Zimmer - Cornfield Chase"
+  - "blink-182 - I Miss You"
+  - "Queen – Bohemian Rhapsody"
+  - "C418 - Sweden"
+  - "Coldplay - Viva La Vida"
+  - "Lena Raine - otherside"
+  - "The OneUps - Kirby's Dream Land - Green Greens"
+  - "Tomohito Nishiura - Professor Layton's Theme"
+  - "Miki Matsubara - Stay With Me"
+  - "Mariya Takeuchi - Plastic Love"
+  - "Yumi Arai - Hikouki Gumo"
+  - "Kuba Oms - My Love"
+  - "Neck Deep - December"
+  - "Elton John - Rocket Man"
+  - "Crystal Dolphin - Engelwood"
+  - "Imagine Dragons - Warriors"
+  - "Bill Withers - Just The Two Of Us"
+  - "Muse - Supermassive Black Hole"
+  - "Cartoon - Whatever I Do"
+
+strongly_emotive:
+  - "Porter Robinson - Goodbye To A World"
+  - "My Chemical Romance - Welcome To The Black Parade"
+  - "Marillion - Kayleigh"
+  - "Hans Zimmer - Cornfield Chase"
+  - "blink-182 - I Miss You"
+  - "Queen – Bohemian Rhapsody"
+  - "C418 - Sweden"
+  - "The OneUps - Kirby's Dream Land - Green Greens"
+  - "Yumi Arai - Hikouki Gumo"
+  - "Kuba Oms - My Love"
+  - "Neck Deep - December"
+  - "Elton John - Rocket Man"
+  - "The Wonder Years - Cardinals"
+  - "Bill Withers - Just The Two Of Us"
+  - "Ludwig Göransson - Can You Hear The Music"
+  - "Cartoon - Whatever I Do"
+
+english:
+  - "The Killers - Mr. Brightside"
+  - "Sum 41 - In Too Deep"
+  - "Porter Robinson - Goodbye To A World"
+  - "My Chemical Romance - Welcome To The Black Parade"
+  - "Smash Mouth - All Star"
+  - "Green Day - Boulevard Of Broken Dreams"
+  - "Marillion - Kayleigh"
+  - "S3RL - Techno Kitty"
+  - "blink-182 - I Miss You"
+  - "Queen – Bohemian Rhapsody"
+  - "Coldplay - Viva La Vida"
+  - "Dragon Force - Through The Fire And Flames"
+  - "succducc - me & u"
+  - "Kuba Oms - My Love"
+  - "Neck Deep - December"
+  - "Mayday Parade - Black Cat"
+  - "Elton John - Rocket Man"
+  - "The Wonder Years - Cardinals"
+  - "Imagine Dragons - Warriors"
+  - "Sleeping With Sirens - If You Can't Hang"
+  - "Pierce The Veil - King for a Day"
+  - "Noma - Brain Power"
+  - "Bill Withers - Just The Two Of Us"
+  - "Muse - Supermassive Black Hole"
+  - "Cartoon - Whatever I Do"
+```

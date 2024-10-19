@@ -1,6 +1,6 @@
 # Mini projet modélisation
 
-Repositorie : https://github.com/JustAlternate/mini-project-song-data-categorized
+Dépôt git : https://github.com/JustAlternate/mini-project-song-data-categorized
 
 ## Morceaux
 
@@ -30,7 +30,7 @@ Repositorie : https://github.com/JustAlternate/mini-project-song-data-categorize
 22. Dragon Force - Through The Fire And Flames
 23. succducc - me & u
 24. Kuba Oms - My Love
-25. Mrs. GREEN APPLE - インフェルノ(Inferno)
+25. Mrs. GREEN APPLE - (Inferno)
 26. Xi - Freedom Dive
 27. KANA-BOON - Silhouette
 28. Neck Deep - December
@@ -96,7 +96,7 @@ Mais alors:
 - Quid de ce qu'est le "vocabulaire proche de l'émotion"
 - ...
 
-On pourra aussi constater que certaines catégories semblent dans certains cas avoir une règle d'assignation binaire *évidente* (plus simple à trouver):
+On pourra aussi constater que des catégories semblent dans certains cas avoir une règle d'assignation binaire *évidente* (plus simple à trouver):
 
 Par exemple :
 
@@ -105,9 +105,11 @@ Pour la catégorie English: "Si un morceau a une majorité de paroles dans la la
 Pour ma conception de la catégorie English, cette règle parait parfaite, donc c'est pour moi une *règle d'assignation binaire évidente*.
 
 Ainsi on peut définir une musique par l'ensemble de ces règles d'assignation :
-Par exemple : "The Killers - Mr. Brightside" = {Male vocal, Fast Paced, English}
+Par exemple : "The Killers - Mr. Brightside" = {règle Male vocal, règle Fast Paced, règle English}
 
-Mais apres avoir défini une musique par ces règles d'assignations, comment l'associer à une catégorie ?
+Autre problème c'est que en general on définit une catégorie par plusieurs règles (= catégorie complexe).
+
+Et donc apres avoir défini plusieurs règle d'assignation pour une musique comment l'associer à une catégorie complexe ?
 
 Imaginons une liste de catégories :
 
@@ -141,6 +143,24 @@ Une attribution correcte pourrait être :
 | Has loud and distorted guitars  | 0    | 1           | 0         | 1           |
 | Has a fast tempo                | 0    | 0           | 1         | 1           |
 | Has a sense of Authenticity     | 0    | 0           | 1         | 0           |
+
+Maintenant on introduit la music : "Dragon Force - Through The Fire And Flames"
+
+| Rules                           | Rock | Heavy Metal | Punk Rock | Power Metal | "Dragon Force - Through The Fire And Flames" |
+|:-------------------------------:|:----:|:-----------:|:---------:|:-----------:|:--------------------------------------------:|
+| Has an electrical guitar        | 1    | 1           | 1         | 1           | 1                                            |
+| Has a drum                      | 1    | 1           | 1         | 1           | 1                                            |
+| Has a bass                      | 1    | 1           | 1         | 1           | 1                                            |
+| Has fantasy based lyrics        | 0    | 0           | 0         | 1           | 1                                            |
+| Has heavy bass                  | 0    | 1           | 0         | 1           | 0                                            |
+| Has heavy drums                 | 0    | 1           | 0         | 1           | 1                                            |
+| Has loud and distorted guitars  | 0    | 1           | 0         | 1           | 0                                            |
+| Has a fast tempo                | 0    | 0           | 1         | 1           | 1                                            |
+| Has a sense of Authenticity     | 0    | 0           | 1         | 0           | 0                                            |
+
+Il semblerait que "Through The Fire And Flames" soit du Power Metal ou bien du Heavy Metal !
+
+Musique et catégories peuvent donc tous les deux se représenter par un ensemble de règle d'assignation.
 
 Mais comment faire pour trouver une stratégie d'attribution automatique ?
 
@@ -209,7 +229,7 @@ male_vocal:
   - "Coldplay - Viva La Vida"
   - "Dragon Force - Through The Fire And Flames"
   - "Kuba Oms - My Love"
-  - "Mrs. GREEN APPLE - インフェルノ(Inferno)"
+  - "Mrs. GREEN APPLE - (Inferno)"
   - "KANA-BOON - Silhouette"
   - "Neck Deep - December"
   - "Mayday Parade - Black Cat"
@@ -234,7 +254,7 @@ fast_paced:
   - "Queen – Bohemian Rhapsody"
   - "Dragon Force - Through The Fire And Flames"
   - "succducc - me & u"
-  - "Mrs. GREEN APPLE - インフェルノ(Inferno)"
+  - "Mrs. GREEN APPLE - (Inferno)"
   - "Xi - Freedom Dive"
   - "KANA-BOON - Silhouette"
   - "Mayday Parade - Black Cat"
